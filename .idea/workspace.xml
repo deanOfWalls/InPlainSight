@@ -5,16 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/ImageEncryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/ImageEncryptor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/PasswordManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/PasswordManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/stenography/ImageStenography.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/stenography/ImageStenography.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/whiteboard/WhiteBoard.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/WhiteBoardTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/WhiteBoardTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/WhiteBoardTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,16 +36,55 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
+  <component name="RunManager" selected="JUnit.PasswordManagerTest">
+    <configuration name="PasswordManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InPlainSight" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.deanOfWalls.whiteboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.deanOfWalls.whiteboard" />
+      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.whiteboard.PasswordManagerTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordManagerTest.passwordHashTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InPlainSight" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.deanOfWalls.whiteboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.deanOfWalls.whiteboard" />
+      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.whiteboard.PasswordManagerTest" />
+      <option name="METHOD_NAME" value="passwordHashTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PasswordManagerTest" />
+        <item itemvalue="JUnit.PasswordManagerTest.passwordHashTest" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
