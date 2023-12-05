@@ -20,8 +20,5 @@ public class PasswordManagerTest {
         System.out.println("Test password was: " + testPassword);
         System.out.println("Hashed password is: " + hashedPassword);
         Assert.assertNotEquals(testPassword, hashedPassword);
-
     }
-
-
 }
