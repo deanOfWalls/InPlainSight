@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/ImageEncryptor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/ImageEncryptor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageEncryptorTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageEncryptorTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,6 +39,8 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.ImageEncryptorTest (1).executor": "Run",
+    "Application.ImageEncryptorTest.executor": "Run",
     "JUnit.PasswordManagerTest.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -47,10 +48,31 @@
     "kotlin-language-version-configured": "true",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0"
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.PasswordManagerTest">
+  <component name="RunManager" selected="Application.ImageEncryptorTest (1)">
+    <configuration name="ImageEncryptorTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ImageEncryptorTest" />
+      <module name="InPlainSight" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ImageEncryptorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.whiteboard.ImageEncryptorTest" />
+      <module name="InPlainSight" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.deanOfWalls.whiteboard.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PasswordManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InPlainSight" />
       <extension name="coverage">
@@ -84,6 +106,8 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ImageEncryptorTest (1)" />
+        <item itemvalue="Application.ImageEncryptorTest" />
         <item itemvalue="JUnit.PasswordManagerTest" />
         <item itemvalue="JUnit.PasswordManagerTest.passwordHashTest" />
       </list>
