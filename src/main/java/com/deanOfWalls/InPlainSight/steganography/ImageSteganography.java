@@ -1,3 +1,5 @@
+package com.deanOfWalls.InPlainSight.steganography;
+
 import java.awt.image.BufferedImage;
 
 public class Steganography {
