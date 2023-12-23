@@ -11,8 +11,8 @@ public class ImageEncryptorTest {
 
     public static void main(String[] args) throws Exception {
         String key = "1234567890123456"; // 16 characters for AES-128
-        String imagePath = "/home/dean/Dev/InPlainSight/decoyDog.jpg";
-        String differentImagePath = "/home/dean/Dev/InPlainSight/secretCat.jpg";
+        String imagePath = "/home/dean/Dev/InPlainSight/decoyDog.png";
+        String differentImagePath = "/home/dean/Dev/InPlainSight/secretCat.png";
 
         // Convert images to byte arrays
         byte[] originalImageData = imageToByteArray(imagePath);
@@ -25,7 +25,7 @@ public class ImageEncryptorTest {
         byte[] decryptedData = ImageEncryptor.decryptImage(encryptedData, key);
 
         // Save decrypted data to a file for visual comparison
-        byteArrayToImage(decryptedData, "/home/dean/Dev/InPlainSight/decryptedDog.jpg");
+        byteArrayToImage(decryptedData, "/home/dean/Dev/InPlainSight/decryptedDog.png");
 
         // Compare original and decrypted data
         boolean isEqual = java.util.Arrays.equals(originalImageData, decryptedData);
