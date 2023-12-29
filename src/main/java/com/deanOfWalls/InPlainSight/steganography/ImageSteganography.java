@@ -26,6 +26,9 @@ public class ImageSteganography {
 
         for (int y = 0; y < decoyImage.getHeight() && dataIndex < numBits; y++) {
             for (int x = 0; x < decoyImage.getWidth() && dataIndex < numBits; x++) {
+                // Debugging output
+                System.out.println("Embedding at pixel (" + x + ", " + y + "), dataIndex: " + dataIndex + ", bitIndex: " + bitIndex);
+
                 int pixel = decoyImage.getRGB(x, y);
                 int lsb = (secretData[dataIndex / 8] >> (7 - bitIndex)) & 1;
                 pixel = (pixel & 0xFFFFFFFE) | lsb;

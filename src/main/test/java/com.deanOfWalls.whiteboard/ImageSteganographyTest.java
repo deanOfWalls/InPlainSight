@@ -37,7 +37,9 @@ public class ImageSteganographyTest {
     }
 
     private static BufferedImage loadImage(String path) throws IOException {
-        return ImageIO.read(new File(path));
+        BufferedImage image = ImageIO.read(new File(path));
+        System.out.println("Loaded image from " + path + " - Type: " + image.getType() + ", Width: " + image.getWidth() + ", Height: " + image.getHeight());
+        return image;
     }
 
     private static void saveImage(BufferedImage image, String path) throws IOException {
