@@ -60,7 +60,12 @@ public class ImageSteganography {
 
                 bitIndex++;
                 if (bitIndex == 8) {
-                    buffer.put(currentByte);
+                    if (dataIndex < dataLength) {
+                        buffer.put(currentByte);
+                    } else {
+                        System.out.println("Attempt to overflow buffer at dataIndex: " + dataIndex);
+                        break;
+                    }
                     currentByte = 0;
                     bitIndex = 0;
                     dataIndex++;
