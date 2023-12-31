@@ -5,10 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/extractedData.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractedSecretCat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/reconstructedTestImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageSteganographyExtractionTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageSteganographyExtractionTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/extractedSecretImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/secretCat.png" beforeDir="false" afterPath="$PROJECT_DIR$/secretCat.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/stegoImage.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,7 +56,7 @@
     "settings.editor.selected.configurable": "preferences.keymap"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.ImageSteganographyExtractionTest">
+  <component name="RunManager" selected="Application.ImageSteganographyTest">
     <configuration name="ImageEncryptorTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageEncryptorTest" />
       <module name="InPlainSight" />
@@ -120,8 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ImageSteganographyExtractionTest" />
         <item itemvalue="Application.ImageSteganographyTest" />
+        <item itemvalue="Application.ImageSteganographyExtractionTest" />
         <item itemvalue="JUnit.PasswordManagerTest" />
         <item itemvalue="Application.ImageEncryptorTest (1)" />
         <item itemvalue="Application.ImageEncryptorTest" />
