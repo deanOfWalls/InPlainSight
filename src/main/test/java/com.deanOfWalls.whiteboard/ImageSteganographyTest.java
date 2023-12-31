@@ -32,6 +32,10 @@ public class ImageSteganographyTest {
             BufferedImage extractedImage = ImageSteganography.byteArrayToImage(extractedData);
             System.out.println("Extracted image created successfully: " + (extractedImage != null));
 
+            if (extractedImage != null) {
+                ImageIO.write(extractedImage, "png", new File("/home/dean/Dev/InPlainSight/extractedSecretCat.png"));
+            }
+
             // Test with unaltered image data
             BufferedImage testImage = ImageIO.read(new File("/home/dean/Dev/InPlainSight/secretCat.png"));
             byte[] testImageData = ImageSteganography.imageToByteArray(testImage);

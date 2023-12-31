@@ -18,21 +18,13 @@ public class ImageSteganography {
         }
 
         BufferedImage stegoImage = new BufferedImage(decoyImage.getWidth(), decoyImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
+        int dataIndex = 0;
+        int bitIndex = 0;
+
         for (int y = 0; y < decoyImage.getHeight(); y++) {
             for (int x = 0; x < decoyImage.getWidth(); x++) {
                 int pixel = decoyImage.getRGB(x, y);
-                stegoImage.setRGB(x, y, pixel);
-            }
-        }
-
-        int dataIndex = 0;
-        int bitIndex = 0;
-        int numBits = secretData.length * 8;
-
-        for (int y = 0; y < decoyImage.getHeight() && dataIndex < numBits; y++) {
-            for (int x = 0; x < decoyImage.getWidth() && dataIndex < numBits; x++) {
-                int pixel = stegoImage.getRGB(x, y);
-                int lsb = (secretData[dataIndex / 8] >> (7 - bitIndex)) & 1;
+                int lsb = dataIndex < secretData.length ? (secretData[dataIndex] >> (7 - bitIndex)) & 1 : 0;
                 pixel = (pixel & 0xFFFFFFFE) | lsb;
                 stegoImage.setRGB(x, y, pixel);
 
@@ -54,8 +46,8 @@ public class ImageSteganography {
         int bitIndex = 0;
         byte currentByte = 0;
 
-        for (int y = 0; y < stegoImage.getHeight() && dataIndex < dataLength; y++) {
-            for (int x = 0; x < stegoImage.getWidth() && dataIndex < dataLength; x++) {
+        for (int y = 0; y < stegoImage.getHeight(); y++) {
+            for (int x = 0; x < stegoImage.getWidth(); x++) {
                 int pixel = stegoImage.getRGB(x, y);
                 int lsb = pixel & 1;
                 currentByte = (byte) ((currentByte << 1) | lsb);
@@ -66,6 +58,9 @@ public class ImageSteganography {
                     currentByte = 0;
                     bitIndex = 0;
                     dataIndex++;
+                    if (dataIndex >= dataLength) {
+                        return buffer.array();
+                    }
                 }
             }
         }
