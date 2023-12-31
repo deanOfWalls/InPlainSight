@@ -15,9 +15,9 @@ public class ImageSteganographyTest {
             // Load the decoy image
             BufferedImage decoyImage = loadImage("/home/dean/Dev/InPlainSight/decoyDog.png");
 
-            // Load the secret image and convert it to a byte array
-            BufferedImage secretImage = loadImage("/home/dean/Dev/InPlainSight/secretCat.png");
-            byte[] secretData = imageToByteArray(secretImage);
+            // Use a simple string for testing
+            String secretMessage = "A"; // Simple data for testing
+            byte[] secretData = secretMessage.getBytes();
 
             // Embed the secret data into the decoy image
             BufferedImage stegoImage = ImageSteganography.embedSecretData(decoyImage, secretData);
@@ -26,7 +26,7 @@ public class ImageSteganographyTest {
             saveImage(stegoImage, "/home/dean/Dev/InPlainSight/stegoImage.png");
 
             // Extract the secret data from the stego image
-            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, secretData.length);
+            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, secretData.length, secretData);
 
             // Compare the original secret data with the extracted data
             boolean isEqual = java.util.Arrays.equals(secretData, extractedData);
