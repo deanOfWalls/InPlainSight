@@ -4,51 +4,45 @@ import com.deanOfWalls.InPlainSight.steganography.ImageSteganography;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class ImageSteganographyTest {
 
     public static void main(String[] args) {
         try {
-            // Load the decoy image
-            BufferedImage decoyImage = loadImage("/home/dean/Dev/InPlainSight/decoyDog.png");
+            BufferedImage decoyImage = ImageIO.read(new File("/home/dean/Dev/InPlainSight/decoyDog.png"));
+            BufferedImage secretImage = ImageIO.read(new File("/home/dean/Dev/InPlainSight/secretCat.png"));
 
-            // Use a simple string for testing
-            String secretMessage = "A"; // Simple data for testing
-            byte[] secretData = secretMessage.getBytes();
+            byte[] secretData = ImageSteganography.imageToByteArray(secretImage);
+            System.out.println("Secret data length: " + secretData.length);
 
-            // Embed the secret data into the decoy image
             BufferedImage stegoImage = ImageSteganography.embedSecretData(decoyImage, secretData);
+            ImageIO.write(stegoImage, "png", new File("/home/dean/Dev/InPlainSight/stegoImage.png"));
 
-            // Save the stego image
-            saveImage(stegoImage, "/home/dean/Dev/InPlainSight/stegoImage.png");
+            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, secretData.length);
+            System.out.println("Extracted data length: " + extractedData.length);
 
-            // Extract the secret data from the stego image
-            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, secretData.length, secretData);
+            // Save extracted data to a file for examination
+            try (FileOutputStream fos = new FileOutputStream("/home/dean/Dev/InPlainSight/extractedData.bin")) {
+                fos.write(extractedData);
+            }
 
-            // Compare the original secret data with the extracted data
-            boolean isEqual = java.util.Arrays.equals(secretData, extractedData);
-            System.out.println("Is extracted data equal to original secret data? " + isEqual);
-        } catch (Exception e) {
+            BufferedImage extractedImage = ImageSteganography.byteArrayToImage(extractedData);
+            System.out.println("Extracted image created successfully: " + (extractedImage != null));
+
+            // Test with unaltered image data
+            BufferedImage testImage = ImageIO.read(new File("/home/dean/Dev/InPlainSight/secretCat.png"));
+            byte[] testImageData = ImageSteganography.imageToByteArray(testImage);
+            BufferedImage reconstructedTestImage = ImageSteganography.byteArrayToImage(testImageData);
+            System.out.println("Reconstructed test image created successfully: " + (reconstructedTestImage != null));
+
+            if (reconstructedTestImage != null) {
+                ImageIO.write(reconstructedTestImage, "png", new File("/home/dean/Dev/InPlainSight/reconstructedTestImage.png"));
+            }
+        } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    private static BufferedImage loadImage(String path) throws IOException {
-        BufferedImage image = ImageIO.read(new File(path));
-        System.out.println("Loaded image from " + path + " - Type: " + image.getType() + ", Width: " + image.getWidth() + ", Height: " + image.getHeight());
-        return image;
-    }
-
-    private static void saveImage(BufferedImage image, String path) throws IOException {
-        ImageIO.write(image, "png", new File(path));
-    }
-
-    private static byte[] imageToByteArray(BufferedImage image) throws IOException {
-        ByteArrayOutputStream bos = new ByteArrayOutputStream();
-        ImageIO.write(image, "png", bos);
-        return bos.toByteArray();
     }
 }

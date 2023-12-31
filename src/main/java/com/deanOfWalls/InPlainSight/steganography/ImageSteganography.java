@@ -1,6 +1,10 @@
 package com.deanOfWalls.InPlainSight.steganography;
 
 import java.awt.image.BufferedImage;
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import javax.imageio.ImageIO;
 import java.nio.ByteBuffer;
 
 public class ImageSteganography {
@@ -13,7 +17,6 @@ public class ImageSteganography {
             throw new IllegalArgumentException("Secret data is too large for the given image.");
         }
 
-        // Create a copy of the image to modify
         BufferedImage stegoImage = new BufferedImage(decoyImage.getWidth(), decoyImage.getHeight(), BufferedImage.TYPE_INT_ARGB);
         for (int y = 0; y < decoyImage.getHeight(); y++) {
             for (int x = 0; x < decoyImage.getWidth(); x++) {
@@ -22,7 +25,6 @@ public class ImageSteganography {
             }
         }
 
-        // Embed each bit of the secret data into the LSB of the image pixels
         int dataIndex = 0;
         int bitIndex = 0;
         int numBits = secretData.length * 8;
@@ -42,12 +44,11 @@ public class ImageSteganography {
             }
         }
 
-        System.out.println("Finished embedding. Last dataIndex: " + dataIndex + ", Total bits: " + numBits);
         return stegoImage;
     }
 
     // Extracts secret data from a stego image
-    public static byte[] extractSecretData(BufferedImage stegoImage, int dataLength, byte[] originalData) {
+    public static byte[] extractSecretData(BufferedImage stegoImage, int dataLength) {
         ByteBuffer buffer = ByteBuffer.allocate(dataLength);
         int dataIndex = 0;
         int bitIndex = 0;
@@ -62,9 +63,6 @@ public class ImageSteganography {
                 bitIndex++;
                 if (bitIndex == 8) {
                     buffer.put(currentByte);
-                    if (dataIndex < originalData.length) {
-                        System.out.println("Extracted byte: " + currentByte + ", Original byte: " + originalData[dataIndex]);
-                    }
                     currentByte = 0;
                     bitIndex = 0;
                     dataIndex++;
@@ -72,7 +70,19 @@ public class ImageSteganography {
             }
         }
 
-        System.out.println("Finished extracting. Last dataIndex: " + dataIndex);
         return buffer.array();
+    }
+
+    // Converts an image to a byte array
+    public static byte[] imageToByteArray(BufferedImage image) throws IOException {
+        ByteArrayOutputStream bos = new ByteArrayOutputStream();
+        ImageIO.write(image, "png", bos);
+        return bos.toByteArray();
+    }
+
+    // Converts a byte array back to an image
+    public static BufferedImage byteArrayToImage(byte[] imageData) throws IOException {
+        ByteArrayInputStream bis = new ByteArrayInputStream(imageData);
+        return ImageIO.read(bis);
     }
 }
