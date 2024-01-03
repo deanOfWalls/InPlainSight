@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/ImageEncryptor.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageEncryptorTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stegoImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/PasswordManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/PasswordManagerTest.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,40 +41,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ImageEncryptorTest (1).executor": "Run",
-    "Application.ImageEncryptorTest.executor": "Run",
-    "Application.ImageSteganographyExtractionTest.executor": "Run",
-    "Application.ImageSteganographyTest.executor": "Run",
-    "JUnit.PasswordManagerTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.keymap"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ImageEncryptorTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageEncryptorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageSteganographyExtractionTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageSteganographyTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PasswordManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
-  <component name="RunManager" selected="Application.ImageSteganographyExtractionTest">
+}</component>
+  <component name="RunManager" selected="Application.Main">
     <configuration name="ImageEncryptorTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageEncryptorTest" />
       <module name="InPlainSight" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="ImageEncryptorTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.whiteboard.ImageEncryptorTest" />
-      <module name="InPlainSight" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.deanOfWalls.whiteboard.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -103,6 +92,19 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.InPlainSight.Main" />
+      <module name="InPlainSight" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.deanOfWalls.InPlainSight.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PasswordManagerTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InPlainSight" />
       <extension name="coverage">
@@ -120,11 +122,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.ImageSteganographyExtractionTest" />
         <item itemvalue="Application.ImageSteganographyTest" />
         <item itemvalue="JUnit.PasswordManagerTest" />
         <item itemvalue="Application.ImageEncryptorTest (1)" />
-        <item itemvalue="Application.ImageEncryptorTest" />
       </list>
     </recent_temporary>
   </component>

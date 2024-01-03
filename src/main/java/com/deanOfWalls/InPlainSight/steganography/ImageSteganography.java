@@ -6,6 +6,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import java.nio.ByteBuffer;
+import org.springframework.web.multipart.MultipartFile;
 
 public class ImageSteganography {
 
@@ -79,5 +80,10 @@ public class ImageSteganography {
     public static BufferedImage byteArrayToImage(byte[] imageData) throws IOException {
         ByteArrayInputStream bis = new ByteArrayInputStream(imageData);
         return ImageIO.read(bis);
+    }
+
+    // Converts MultipartFile to BufferedImage
+    public static BufferedImage convertToBufferedImage(MultipartFile file) throws IOException {
+        return ImageIO.read(file.getInputStream());
     }
 }

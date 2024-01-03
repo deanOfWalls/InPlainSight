@@ -1,0 +1,84 @@
+.
+├── decoyDog.png
+├── extractedData.bin
+├── extractedSecretCat.png
+├── extractedSecretImage.png
+├── InPlainSight.iml
+├── pom.xml
+├── project_structure.txt
+├── README.md
+├── reconstructedTestImage.png
+├── secretCat.png
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── deanOfWalls
+│       │           └── InPlainSight
+│       │               ├── configuration
+│       │               │   └── CorsConfig.java
+│       │               ├── controller
+│       │               │   ├── GalleryController.java
+│       │               │   ├── ImageController.java
+│       │               │   └── SteganographyController.java
+│       │               ├── encryption
+│       │               ├── Main.java
+│       │               └── steganography
+│       │                   └── ImageSteganography.java
+│       ├── resources
+│       │   ├── application.properties
+│       │   ├── archetype-resources
+│       │   │   ├── pom.xml
+│       │   │   └── src
+│       │   │       ├── main
+│       │   │       │   └── java
+│       │   │       │       └── App.java
+│       │   │       └── test
+│       │   │           └── java
+│       │   │               └── AppTest.java
+│       │   └── META-INF
+│       │       └── maven
+│       │           └── archetype.xml
+│       └── test
+│           └── java
+│               └── com.deanOfWalls.whiteboard
+│                   ├── ImageSteganographyExtractionTest.java
+│                   └── ImageSteganographyTest.java
+├── stegoImage.png
+└── target
+    ├── classes
+    │   ├── application.properties
+    │   ├── archetype-resources
+    │   │   └── pom.xml
+    │   ├── com
+    │   │   └── deanOfWalls
+    │   │       └── InPlainSight
+    │   │           ├── controller
+    │   │           │   └── SteganographyController.class
+    │   │           ├── Main.class
+    │   │           └── steganography
+    │   │               └── ImageSteganography.class
+    │   └── META-INF
+    │       └── maven
+    │           └── archetype.xml
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── InPlainSight-1.0-SNAPSHOT.jar
+    ├── maven-archiver
+    │   └── pom.properties
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       └── compile
+    │           └── default-compile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    └── test-classes
+        └── com
+            └── deanOfWalls
+                └── whiteboard
+                    ├── ImageSteganographyExtractionTest.class
+                    └── ImageSteganographyTest.class
+
+46 directories, 36 files
