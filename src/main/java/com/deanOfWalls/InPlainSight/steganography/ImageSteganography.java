@@ -4,6 +4,7 @@ import java.awt.image.BufferedImage;
 import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.io.InputStream;
 import javax.imageio.ImageIO;
 import java.nio.ByteBuffer;
 import org.springframework.web.multipart.MultipartFile;
@@ -14,7 +15,8 @@ public class ImageSteganography {
     public static BufferedImage embedSecretData(BufferedImage decoyImage, byte[] secretData) {
         // Ensure the decoy image can hold the secret data
         int dataCapacity = decoyImage.getWidth() * decoyImage.getHeight();
-        if (secretData.length * 8 > dataCapacity) {
+        // Increase the threshold from 8 to 16
+        if (secretData.length * 16 > dataCapacity) {
             throw new IllegalArgumentException("Secret data is too large for the given image.");
         }
 
@@ -69,6 +71,12 @@ public class ImageSteganography {
         return buffer.array();
     }
 
+    // Converts a MultipartFile to a BufferedImage
+    public static BufferedImage convertToBufferedImage(MultipartFile file) throws IOException {
+        InputStream inputStream = file.getInputStream();
+        return ImageIO.read(inputStream);
+    }
+
     // Converts an image to a byte array
     public static byte[] imageToByteArray(BufferedImage image) throws IOException {
         ByteArrayOutputStream bos = new ByteArrayOutputStream();
@@ -80,10 +88,5 @@ public class ImageSteganography {
     public static BufferedImage byteArrayToImage(byte[] imageData) throws IOException {
         ByteArrayInputStream bis = new ByteArrayInputStream(imageData);
         return ImageIO.read(bis);
-    }
-
-    // Converts MultipartFile to BufferedImage
-    public static BufferedImage convertToBufferedImage(MultipartFile file) throws IOException {
-        return ImageIO.read(file.getInputStream());
     }
 }

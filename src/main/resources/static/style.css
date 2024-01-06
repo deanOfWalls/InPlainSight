@@ -1,0 +1,71 @@
+/* Set the background color of the entire page to black */
+body {
+    background-color: black;
+    color: white; /* Set the text color to white */
+    margin: 0; /* Remove default body margin */
+    font-family: Arial;
+}
+
+/* Style for the thumbnail container */
+#imageGallery {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Style for each thumbnail container */
+.thumbnail-container {
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* Style for each thumbnail */
+.thumbnail-container img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 5px;
+}
+
+/* Style for file info under each thumbnail */
+.file-info {
+    font-size: 12px;
+}
+
+/* Styles for the overlay */
+#overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1;
+    overflow: auto;
+}
+
+#decoyImages {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+}
+
+#decoyImages img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    cursor: pointer;
+    margin: 5px;
+    border: 2px solid white;
+}

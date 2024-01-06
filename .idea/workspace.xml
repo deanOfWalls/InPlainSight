@@ -6,11 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/encryption/PasswordManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_structure.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/configuration/CorsConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/PasswordManagerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,17 +47,27 @@
     &quot;Application.ImageEncryptorTest.executor&quot;: &quot;Run&quot;,
     &quot;Application.ImageSteganographyExtractionTest.executor&quot;: &quot;Run&quot;,
     &quot;Application.ImageSteganographyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.PasswordManagerTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dean/Dev/InPlainSight/src/main/java/com/deanOfWalls/InPlainSight/controller&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
+    </key>
+  </component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="ImageEncryptorTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="ImageEncryptorTest" />

@@ -36,21 +36,30 @@ public class SteganographyController {
         }
     }
 
-    @PostMapping("/decode")
-    public ResponseEntity<?> decodeImage(@RequestParam("stegoImage") MultipartFile stegoImageFile,
-                                         @RequestParam("dataLength") int dataLength) {
+    @PostMapping("/extract")
+    public ResponseEntity<?> extractImage(@RequestParam("selectedImage") MultipartFile selectedImageFile) {
         try {
-            BufferedImage stegoImage = ImageSteganography.convertToBufferedImage(stegoImageFile);
-            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, dataLength);
+            BufferedImage selectedImage = ImageSteganography.convertToBufferedImage(selectedImageFile);
+
+            // Replace 'dataLength' with the estimated size of the extracted data
+            int dataLength = estimateDataLength(selectedImage);
+
+            byte[] extractedData = ImageSteganography.extractSecretData(selectedImage, dataLength);
 
             return ResponseEntity
                     .ok()
-                    .contentType(MediaType.IMAGE_PNG)
+                    .contentType(MediaType.APPLICATION_OCTET_STREAM)
                     .body(new ByteArrayResource(extractedData));
         } catch (IOException e) {
             return ResponseEntity
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Failed to extract data from image: " + e.getMessage());
         }
+    }
+
+    private int estimateDataLength(BufferedImage image) {
+        // Implement the logic to estimate the size of the extracted data
+        // You can calculate it based on the image dimensions or other factors
+        return 0; // Replace with the actual estimated data length
     }
 }
