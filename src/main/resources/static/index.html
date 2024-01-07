@@ -15,24 +15,22 @@
 <!-- The image container -->
 <div id="imageGallery" class="row"></div>
 
+<!-- Download link for the encoded image on the main page -->
+<a id="mainDownloadLink" href="#" style="display: none;">Download Encoded Image</a>
+
 <!-- Add the overlay for Encode and Extract buttons -->
 <div id="overlay" style="background-color: black; display: none;">
-    <!-- Add Encode and Extract buttons within the overlay -->
-    <button id="encodeButton" style="display: none;">Encode</button>
-    <button id="extractButton" style="display: none;">Extract</button>
-    <h3 style="color: white; text-align: center;">Select a decoy image</h3>
-    <div id="decoyImages" class="row">
-        <!-- Decoy images from resources/static -->
-        <img src="images/decoy1.png" alt="Decoy 1" id="selectedDecoyImage1">
-        <img src="images/decoy2.png" alt="Decoy 2" id="selectedDecoyImage2">
-        <img src="images/decoy3.png" alt="Decoy 3" id="selectedDecoyImage3">
-        <img src="images/decoy4.png" alt="Decoy 4" id="selectedDecoyImage4">
-        <!-- Add more decoy images here with unique IDs -->
+    <div class="overlay-content">
+        <h3 style="color: white; text-align: center;">Select a decoy image</h3>
+        <div id="decoyImages" class="row">
+            <!-- Decoy images from resources/static -->
+            <img src="images/decoy1.png" alt="Decoy 1" id="selectedDecoyImage1">
+            <img src="images/decoy2.png" alt="Decoy 2" id="selectedDecoyImage2">
+            <img src="images/decoy3.png" alt="Decoy 3" id="selectedDecoyImage3">
+            <img src="images/decoy4.png" alt="Decoy 4" id="selectedDecoyImage4">
+            <!-- Add more decoy images here with unique IDs -->
+        </div>
     </div>
-    <!-- Add an empty image element with the ID 'stegoImage' -->
-    <img src="" alt="Stego Image" id="stegoImage" style="display: none;">
-    <!-- Add a download link element with the ID 'downloadLink' -->
-    <a id="downloadLink" style="display: none;">Download Stego Image</a>
 </div>
 
 <script src="script.js"></script>

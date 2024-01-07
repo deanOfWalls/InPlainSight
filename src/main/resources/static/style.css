@@ -51,21 +51,33 @@ body {
     background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
     overflow: auto;
+    padding-top: 50px; /* Adjust as needed */
+}
+
+.overlay-content {
+    text-align: center;
+    margin: auto;
 }
 
 #decoyImages {
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
+    display: inline-flex;
     justify-content: center;
-    padding: 20px;
+    flex-wrap: wrap;
 }
 
+/* Style for decoy images */
 #decoyImages img {
-    width: 150px;
-    height: 150px;
+    width: 150px; /* Thumbnail size */
+    height: 150px; /* Thumbnail size */
     object-fit: cover;
     cursor: pointer;
     margin: 5px;
-    border: 2px solid white;
+}
+
+/* Centering the main download link */
+#mainDownloadLink {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color: white;
 }

@@ -88,10 +88,13 @@ function encodeImageWithDecoy() {
     .then(response => response.blob())
     .then(data => {
         const url = URL.createObjectURL(data);
-        const downloadLink = document.getElementById('downloadLink');
+        const downloadLink = document.getElementById('mainDownloadLink');
         downloadLink.href = url;
         downloadLink.download = 'encoded_image.png';
         downloadLink.style.display = 'block';
+
+        // Hide the overlay
+        document.getElementById('overlay').style.display = 'none';
     })
     .catch(error => console.error('Error encoding image:', error));
 }
