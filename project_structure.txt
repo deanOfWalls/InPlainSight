@@ -22,7 +22,7 @@
 │       │               │   ├── ImageController.java
 │       │               │   └── SteganographyController.java
 │       │               ├── Main.java
-│       │               └── service
+│       │               └── steganography
 │       │                   └── ImageSteganography.java
 │       ├── resources
 │       │   ├── application.properties
@@ -39,6 +39,11 @@
 │       │   │   └── maven
 │       │   │       └── archetype.xml
 │       │   └── static
+│       │       ├── images
+│       │       │   ├── decoy1.png
+│       │       │   ├── decoy2.png
+│       │       │   ├── decoy3.png
+│       │       │   └── decoy4.png
 │       │       ├── index.html
 │       │       ├── script.js
 │       │       └── style.css
@@ -56,6 +61,12 @@
     │   ├── com
     │   │   └── deanOfWalls
     │   │       └── InPlainSight
+    │   │           ├── configuration
+    │   │           │   └── StaticResourceConfiguration.class
+    │   │           ├── controller
+    │   │           │   ├── GalleryController.class
+    │   │           │   ├── ImageController.class
+    │   │           │   └── SteganographyController.class
     │   │           ├── Main.class
     │   │           └── steganography
     │   │               └── ImageSteganography.class
@@ -63,16 +74,29 @@
     │   │   └── maven
     │   │       └── archetype.xml
     │   └── static
+    │       ├── images
+    │       │   ├── decoy1.png
+    │       │   ├── decoy2.png
+    │       │   ├── decoy3.png
+    │       │   └── decoy4.png
     │       ├── index.html
     │       ├── script.js
     │       └── style.css
     ├── generated-sources
     │   └── annotations
-    └── maven-status
-        └── maven-compiler-plugin
-            └── compile
-                └── default-compile
-                    ├── createdFiles.lst
-                    └── inputFiles.lst
+    ├── generated-test-sources
+    │   └── test-annotations
+    ├── maven-status
+    │   └── maven-compiler-plugin
+    │       └── compile
+    │           └── default-compile
+    │               ├── createdFiles.lst
+    │               └── inputFiles.lst
+    └── test-classes
+        └── com
+            └── deanOfWalls
+                └── whiteboard
+                    ├── ImageSteganographyExtractionTest.class
+                    └── ImageSteganographyTest.class
 
-39 directories, 37 files
+49 directories, 51 files

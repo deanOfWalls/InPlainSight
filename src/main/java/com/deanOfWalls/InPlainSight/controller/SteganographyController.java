@@ -17,10 +17,10 @@ public class SteganographyController {
 
     @PostMapping("/encode")
     public ResponseEntity<?> encodeImage(@RequestParam("decoyImage") MultipartFile decoyImageFile,
-                                         @RequestParam("secretData") MultipartFile secretDataFile) {
+                                         @RequestParam("secretImage") MultipartFile secretImageFile) {
         try {
             BufferedImage decoyImage = ImageSteganography.convertToBufferedImage(decoyImageFile);
-            BufferedImage secretImage = ImageSteganography.convertToBufferedImage(secretDataFile);
+            BufferedImage secretImage = ImageSteganography.convertToBufferedImage(secretImageFile);
 
             BufferedImage stegoImage = ImageSteganography.embedSecretData(decoyImage, ImageSteganography.imageToByteArray(secretImage));
             byte[] stegoImageData = ImageSteganography.imageToByteArray(stegoImage);
@@ -37,14 +37,14 @@ public class SteganographyController {
     }
 
     @PostMapping("/extract")
-    public ResponseEntity<?> extractImage(@RequestParam("selectedImage") MultipartFile selectedImageFile) {
+    public ResponseEntity<?> extractImage(@RequestParam("stegoImage") MultipartFile stegoImageFile) {
         try {
-            BufferedImage selectedImage = ImageSteganography.convertToBufferedImage(selectedImageFile);
+            BufferedImage stegoImage = ImageSteganography.convertToBufferedImage(stegoImageFile);
 
             // Replace 'dataLength' with the estimated size of the extracted data
-            int dataLength = estimateDataLength(selectedImage);
+            int dataLength = estimateDataLength(stegoImage);
 
-            byte[] extractedData = ImageSteganography.extractSecretData(selectedImage, dataLength);
+            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, dataLength);
 
             return ResponseEntity
                     .ok()

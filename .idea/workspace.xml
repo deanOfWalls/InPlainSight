@@ -7,10 +7,9 @@
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_structure.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/configuration/CorsConfig.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
