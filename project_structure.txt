@@ -1,20 +1,15 @@
 .
-├── decoyDog.png
-├── extractedData.bin
-├── extractedSecretCat.png
-├── extractedSecretImage.png
 ├── InPlainSight.iml
 ├── pom.xml
 ├── project_structure.txt
 ├── README.md
-├── reconstructedTestImage.png
-├── secretCat.png
 ├── src
 │   └── main
 │       ├── java
 │       │   └── com
 │       │       └── deanOfWalls
 │       │           └── InPlainSight
+│       │               ├── bin
 │       │               ├── configuration
 │       │               │   └── StaticResourceConfiguration.java
 │       │               ├── controller
@@ -23,7 +18,6 @@
 │       │               │   └── SteganographyController.java
 │       │               ├── Main.java
 │       │               └── steganography
-│       │                   └── ImageSteganography.java
 │       ├── resources
 │       │   ├── application.properties
 │       │   ├── archetype-resources
@@ -39,25 +33,25 @@
 │       │   │   └── maven
 │       │   │       └── archetype.xml
 │       │   └── static
-│       │       ├── images
-│       │       │   ├── decoy1.png
-│       │       │   ├── decoy2.png
-│       │       │   ├── decoy3.png
-│       │       │   └── decoy4.png
 │       │       ├── index.html
+│       │       ├── not_a_lizard.png
 │       │       ├── script.js
 │       │       └── style.css
 │       └── test
 │           └── java
 │               └── com.deanOfWalls.whiteboard
-│                   ├── ImageSteganographyExtractionTest.java
-│                   └── ImageSteganographyTest.java
-├── stegoImage.png
 └── target
     ├── classes
     │   ├── application.properties
     │   ├── archetype-resources
-    │   │   └── pom.xml
+    │   │   ├── pom.xml
+    │   │   └── src
+    │   │       ├── main
+    │   │       │   └── java
+    │   │       │       └── App.java
+    │   │       └── test
+    │   │           └── java
+    │   │               └── AppTest.java
     │   ├── com
     │   │   └── deanOfWalls
     │   │       └── InPlainSight
@@ -65,21 +59,14 @@
     │   │           │   └── StaticResourceConfiguration.class
     │   │           ├── controller
     │   │           │   ├── GalleryController.class
-    │   │           │   ├── ImageController.class
-    │   │           │   └── SteganographyController.class
-    │   │           ├── Main.class
-    │   │           └── steganography
-    │   │               └── ImageSteganography.class
+    │   │           │   └── ImageController.class
+    │   │           └── Main.class
     │   ├── META-INF
     │   │   └── maven
     │   │       └── archetype.xml
     │   └── static
-    │       ├── images
-    │       │   ├── decoy1.png
-    │       │   ├── decoy2.png
-    │       │   ├── decoy3.png
-    │       │   └── decoy4.png
     │       ├── index.html
+    │       ├── not_a_lizard.png
     │       ├── script.js
     │       └── style.css
     ├── generated-sources
@@ -93,10 +80,5 @@
     │               ├── createdFiles.lst
     │               └── inputFiles.lst
     └── test-classes
-        └── com
-            └── deanOfWalls
-                └── whiteboard
-                    ├── ImageSteganographyExtractionTest.class
-                    └── ImageSteganographyTest.class
 
-49 directories, 51 files
+49 directories, 33 files

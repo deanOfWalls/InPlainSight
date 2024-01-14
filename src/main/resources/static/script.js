@@ -8,24 +8,21 @@ function showImages(files) {
     gallery.innerHTML = ''; // Clear existing images
 
     for (const file of files) {
-        if (file.type.startsWith('image/')) { // Check if the file is an image
+        if (file.type.startsWith('image/')) {
             const img = document.createElement('img');
             img.src = URL.createObjectURL(file);
             img.title = file.name;
             img.classList.add('thumbnail');
 
-            // Create a container for each thumbnail
             const thumbnailContainer = document.createElement('div');
             thumbnailContainer.classList.add('thumbnail-container');
             thumbnailContainer.appendChild(img);
 
-            // Add filename and file size under each thumbnail
             const fileInfo = document.createElement('div');
             fileInfo.classList.add('file-info');
             fileInfo.textContent = `${file.name} (${(file.size / 1024).toFixed(2)} kB)`;
             thumbnailContainer.appendChild(fileInfo);
 
-            // Add Encode and Extract buttons for each image
             const encodeButton = document.createElement('button');
             encodeButton.textContent = 'Encode';
             encodeButton.addEventListener('click', function() {
@@ -36,7 +33,7 @@ function showImages(files) {
             const extractButton = document.createElement('button');
             extractButton.textContent = 'Extract';
             extractButton.addEventListener('click', function() {
-                handleExtraction(img.src);
+                handleExtraction(file);
             });
             thumbnailContainer.appendChild(extractButton);
 
@@ -49,9 +46,7 @@ function showImages(files) {
 function showDecoyImages() {
     if (encodeMode) {
         const decoyImages = document.getElementById('decoyImages');
-        if (decoyImages) {
-            decoyImages.style.display = 'block';
-        }
+        decoyImages.style.display = 'block';
     }
 }
 
@@ -65,7 +60,6 @@ function handleEncoding(file) {
 
 // Function to handle the click event on a decoy image
 function handleDecoyImageClick(decoyImageSrc) {
-    // Fetch the actual decoy image file based on decoyImageSrc
     fetch(decoyImageSrc)
     .then(response => response.blob())
     .then(blob => {
@@ -87,26 +81,39 @@ function encodeImageWithDecoy() {
     })
     .then(response => response.blob())
     .then(data => {
-        const url = URL.createObjectURL(data);
-        const downloadLink = document.getElementById('mainDownloadLink');
-        downloadLink.href = url;
-        downloadLink.download = 'encoded_image.png';
-        downloadLink.style.display = 'block';
-
-        // Hide the overlay
-        document.getElementById('overlay').style.display = 'none';
+        updateDownloadLink(data, 'Download Encoded Image', 'encoded_image.png');
     })
     .catch(error => console.error('Error encoding image:', error));
 }
 
 // Function to handle the extraction process
-function handleExtraction(imageSrc) {
-    // Implement AJAX request to extract the image
-    console.log('Extracting from', imageSrc);
-    // Example: AJAX call to your backend endpoint /api/steganography/extract
+function handleExtraction(file) {
+    let formData = new FormData();
+    formData.append('stegoImage', file);
+
+    fetch('/api/steganography/extract', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.blob())
+    .then(data => {
+        updateDownloadLink(data, 'Download Extracted Image', 'extracted_image.png');
+    })
+    .catch(error => console.error('Error extracting image:', error));
 }
 
-// Add event listeners for decoy images and file input
+// Function to update the download link
+function updateDownloadLink(blobData, linkText, fileName) {
+    const url = URL.createObjectURL(blobData);
+    const downloadLink = document.getElementById('mainDownloadLink');
+    downloadLink.href = url;
+    downloadLink.download = fileName;
+    downloadLink.textContent = linkText;
+    downloadLink.style.display = 'block';
+    document.getElementById('overlay').style.display = 'none'; // Hide the overlay
+}
+
+// Event listeners for decoy images and file input
 window.onload = function() {
     document.getElementById('selectedDecoyImage1').addEventListener('click', function() { handleDecoyImageClick('images/decoy1.png'); });
     document.getElementById('selectedDecoyImage2').addEventListener('click', function() { handleDecoyImageClick('images/decoy2.png'); });

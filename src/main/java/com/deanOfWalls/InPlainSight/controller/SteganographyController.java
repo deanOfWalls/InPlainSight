@@ -1,6 +1,5 @@
 package com.deanOfWalls.InPlainSight.controller;
 
-import com.deanOfWalls.InPlainSight.steganography.ImageSteganography;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
@@ -19,10 +18,11 @@ public class SteganographyController {
     public ResponseEntity<?> encodeImage(@RequestParam("decoyImage") MultipartFile decoyImageFile,
                                          @RequestParam("secretImage") MultipartFile secretImageFile) {
         try {
-            BufferedImage decoyImage = ImageSteganography.convertToBufferedImage(decoyImageFile);
-            BufferedImage secretImage = ImageSteganography.convertToBufferedImage(secretImageFile);
+            BufferedImage decoyImage = ImageSteganography.convertToARGB(decoyImageFile);
+            BufferedImage secretImage = ImageSteganography.convertToARGB(secretImageFile);
 
-            BufferedImage stegoImage = ImageSteganography.embedSecretData(decoyImage, ImageSteganography.imageToByteArray(secretImage));
+            BufferedImage stegoImage = ImageSteganography.embedSecretData(decoyImage, secretImage);
+
             byte[] stegoImageData = ImageSteganography.imageToByteArray(stegoImage);
 
             return ResponseEntity
@@ -39,12 +39,8 @@ public class SteganographyController {
     @PostMapping("/extract")
     public ResponseEntity<?> extractImage(@RequestParam("stegoImage") MultipartFile stegoImageFile) {
         try {
-            BufferedImage stegoImage = ImageSteganography.convertToBufferedImage(stegoImageFile);
-
-            // Replace 'dataLength' with the estimated size of the extracted data
-            int dataLength = estimateDataLength(stegoImage);
-
-            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage, dataLength);
+            BufferedImage stegoImage = ImageSteganography.convertToARGB(stegoImageFile);
+            byte[] extractedData = ImageSteganography.extractSecretData(stegoImage);
 
             return ResponseEntity
                     .ok()
@@ -55,11 +51,5 @@ public class SteganographyController {
                     .status(HttpStatus.INTERNAL_SERVER_ERROR)
                     .body("Failed to extract data from image: " + e.getMessage());
         }
-    }
-
-    private int estimateDataLength(BufferedImage image) {
-        // Implement the logic to estimate the size of the extracted data
-        // You can calculate it based on the image dimensions or other factors
-        return 0; // Replace with the actual estimated data length
     }
 }
