@@ -5,25 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/decoyDog.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractedData.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractedSecretCat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/extractedSecretImage.png" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_structure.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/reconstructedTestImage.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/secretCat.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/steganography/ImageSteganography.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/decoy1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/decoy2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/decoy3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/decoy4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageSteganographyExtractionTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/com.deanOfWalls.whiteboard/ImageSteganographyTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/stegoImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/extracted/home/dean/Dev/InPlainSight/src/main/resources/static/images/actually_a_lizard.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/outputArchive.rar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/outputStegoImage.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,8 +25,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -55,29 +47,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.ImageEncryptorTest (1).executor": "Run",
-    "Application.ImageEncryptorTest.executor": "Run",
-    "Application.ImageSteganographyExtractionTest.executor": "Run",
-    "Application.ImageSteganographyTest.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.RarOperations.executor": "Run",
-    "Application.SevenZipJBindingInitCheck.executor": "Run",
-    "JUnit.PasswordManagerTest.executor": "Run",
-    "JUnit.SevenZOperationsTest (1).executor": "Run",
-    "JUnit.SevenZOperationsTest.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/home/dean/Dev/InPlainSight/src/main/resources/static",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "MavenSettings"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.ImageEncryptorTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageEncryptorTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageSteganographyExtractionTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ImageSteganographyTest.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.RarOperations.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SevenZipJBindingInitCheck.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.PasswordManagerTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SevenZOperationsTest (1).executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SevenZOperationsTest.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/dean/Dev/InPlainSight/src/main/resources/static&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
@@ -87,7 +79,7 @@
       <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.SevenZOperationsTest (1)">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.InPlainSight.Main" />
       <module name="InPlainSight" />
@@ -159,11 +151,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SevenZOperationsTest (1)" />
         <item itemvalue="Application.SevenZipJBindingInitCheck" />
         <item itemvalue="JUnit.SevenZOperationsTest" />
         <item itemvalue="Application.RarOperations" />
-        <item itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>

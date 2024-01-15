@@ -1,5 +1,4 @@
 .
-├── InPlainSight.iml
 ├── pom.xml
 ├── project_structure.txt
 ├── README.md
@@ -9,7 +8,6 @@
 │       │   └── com
 │       │       └── deanOfWalls
 │       │           └── InPlainSight
-│       │               ├── bin
 │       │               ├── configuration
 │       │               │   └── StaticResourceConfiguration.java
 │       │               ├── controller
@@ -17,68 +15,34 @@
 │       │               │   ├── ImageController.java
 │       │               │   └── SteganographyController.java
 │       │               ├── Main.java
-│       │               └── steganography
-│       ├── resources
-│       │   ├── application.properties
-│       │   ├── archetype-resources
-│       │   │   ├── pom.xml
-│       │   │   └── src
-│       │   │       ├── main
-│       │   │       │   └── java
-│       │   │       │       └── App.java
-│       │   │       └── test
-│       │   │           └── java
-│       │   │               └── AppTest.java
-│       │   ├── META-INF
-│       │   │   └── maven
-│       │   │       └── archetype.xml
-│       │   └── static
-│       │       ├── index.html
-│       │       ├── not_a_lizard.png
-│       │       ├── script.js
-│       │       └── style.css
-│       └── test
-│           └── java
-│               └── com.deanOfWalls.whiteboard
+│       │               └── service
+│       │                   └── SteganographyService.java
+│       └── resources
+│           ├── application.properties
+│           └── static
+│               ├── images
+│               │   ├── actually_a_lizard.png
+│               │   └── not_a_lizard.png
+│               ├── index.html
+│               ├── script.js
+│               └── style.css
 └── target
     ├── classes
     │   ├── application.properties
-    │   ├── archetype-resources
-    │   │   ├── pom.xml
-    │   │   └── src
-    │   │       ├── main
-    │   │       │   └── java
-    │   │       │       └── App.java
-    │   │       └── test
-    │   │           └── java
-    │   │               └── AppTest.java
     │   ├── com
     │   │   └── deanOfWalls
     │   │       └── InPlainSight
-    │   │           ├── configuration
-    │   │           │   └── StaticResourceConfiguration.class
-    │   │           ├── controller
-    │   │           │   ├── GalleryController.class
-    │   │           │   └── ImageController.class
-    │   │           └── Main.class
-    │   ├── META-INF
-    │   │   └── maven
-    │   │       └── archetype.xml
+    │   │           ├── Main.class
+    │   │           └── service
+    │   │               └── SteganographyService.class
     │   └── static
+    │       ├── images
+    │       │   ├── actually_a_lizard.png
+    │       │   └── not_a_lizard.png
     │       ├── index.html
-    │       ├── not_a_lizard.png
     │       ├── script.js
     │       └── style.css
-    ├── generated-sources
-    │   └── annotations
-    ├── generated-test-sources
-    │   └── test-annotations
-    ├── maven-status
-    │   └── maven-compiler-plugin
-    │       └── compile
-    │           └── default-compile
-    │               ├── createdFiles.lst
-    │               └── inputFiles.lst
-    └── test-classes
+    └── generated-sources
+        └── annotations
 
-49 directories, 33 files
+23 directories, 23 files
