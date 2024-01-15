@@ -32,6 +32,12 @@
     │   ├── com
     │   │   └── deanOfWalls
     │   │       └── InPlainSight
+    │   │           ├── configuration
+    │   │           │   └── StaticResourceConfiguration.class
+    │   │           ├── controller
+    │   │           │   ├── GalleryController.class
+    │   │           │   ├── ImageController.class
+    │   │           │   └── SteganographyController.class
     │   │           ├── Main.class
     │   │           └── service
     │   │               └── SteganographyService.class
@@ -45,4 +51,4 @@
     └── generated-sources
         └── annotations
 
-23 directories, 23 files
+25 directories, 27 files

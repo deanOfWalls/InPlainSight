@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/maven/archetype.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/main/java/App.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/archetype-resources/src/test/java/AppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/extracted/home/dean/Dev/InPlainSight/src/main/resources/static/images/actually_a_lizard.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/outputArchive.rar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/outputStegoImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

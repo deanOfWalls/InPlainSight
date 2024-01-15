@@ -1,12 +1,14 @@
-package com.yourpackage.controller;
+package com.deanOfWalls.InPlainSight.controller;
 
-import com.yourpackage.service.SteganographyService;
+import com.deanOfWalls.InPlainSight.service.SteganographyService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
+import java.io.IOException;
 
 @RestController
 @RequestMapping("/api/steganography")
@@ -16,14 +18,24 @@ public class SteganographyController {
     private SteganographyService steganographyService;
 
     @PostMapping("/encode")
-    public ResponseEntity<?> encodeFiles(MultipartFile decoyImage, MultipartFile fileToHide, String password) {
-        // TODO: Call steganographyService to encode the files
-        return ResponseEntity.ok().body("Encoded file");
+    public ResponseEntity<byte[]> encodeFiles(@RequestParam("decoyImage") MultipartFile decoyImage, @RequestParam("fileToHide") MultipartFile fileToHide, @RequestParam("password") String password) throws IOException, InterruptedException {
+        byte[] encodedData = steganographyService.encodeFiles(decoyImage, fileToHide, password);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.setContentDispositionFormData("attachment", "encoded_image.png");
+
+        return new ResponseEntity<>(encodedData, headers, HttpStatus.OK);
     }
 
     @PostMapping("/extract")
-    public ResponseEntity<?> extractFiles(MultipartFile stegoImage, String password) {
-        // TODO: Call steganographyService to extract the files
-        return ResponseEntity.ok().body("Extracted file");
+    public ResponseEntity<byte[]> extractFiles(@RequestParam("stegoImage") MultipartFile stegoImage, @RequestParam("password") String password) throws IOException, InterruptedException {
+        byte[] extractedData = steganographyService.decodeFiles(stegoImage.getBytes(), password);
+
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.setContentDispositionFormData("attachment", "extracted_image.png");
+
+        return new ResponseEntity<>(extractedData, headers, HttpStatus.OK);
     }
 }
