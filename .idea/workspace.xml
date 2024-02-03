@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/test/java/SteganographyServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/project_structure.txt" beforeDir="false" afterPath="$PROJECT_DIR$/project_structure.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/controller/SteganographyController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,18 +50,22 @@
     &quot;Application.Main.executor&quot;: &quot;Run&quot;,
     &quot;Application.RarOperations.executor&quot;: &quot;Run&quot;,
     &quot;Application.SevenZipJBindingInitCheck.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SteganographyServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.PasswordManagerTest.executor&quot;: &quot;Run&quot;,
     &quot;JUnit.SevenZOperationsTest (1).executor&quot;: &quot;Run&quot;,
     &quot;JUnit.SevenZOperationsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SteganographyIntegrationTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.SteganographyServiceTest.executor&quot;: &quot;Run&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;/home/dean/Dev/InPlainSight_Cat/InPlainSight/src/main/test/java&quot;,
     &quot;last_opened_file_path&quot;: &quot;/home/dean/Dev/InPlainSight/src/main/resources/static&quot;,
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;MavenSettings&quot;
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
   }
 }</component>
   <component name="RecentsManager">
@@ -71,8 +76,11 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static/images" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.SteganographyServiceTest">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.InPlainSight.Main" />
       <module name="InPlainSight" />
@@ -86,28 +94,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="RarOperations" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.InPlainSight.steganography.RarOperations" />
+    <configuration name="SteganographyServiceTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="SteganographyServiceTest" />
       <module name="InPlainSight" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.deanOfWalls.InPlainSight.steganography.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="SevenZipJBindingInitCheck" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.InPlainSight.steganography.SevenZipJBindingInitCheck" />
-      <module name="InPlainSight" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.deanOfWalls.InPlainSight.steganography.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -127,16 +116,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SevenZOperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SteganographyIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="InPlainSight" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.deanOfWalls.whiteboard.*" />
+          <option name="PATTERN" value=".*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.deanOfWalls.whiteboard" />
-      <option name="MAIN_CLASS_NAME" value="com.deanOfWalls.whiteboard.SevenZOperationsTest" />
+      <option name="PACKAGE_NAME" value="InPlainSight" />
+      <option name="MAIN_CLASS_NAME" value="InPlainSight.SteganographyIntegrationTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SteganographyServiceTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="InPlainSight" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value=".*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="SteganographyServiceTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -144,11 +148,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.SteganographyServiceTest" />
+        <item itemvalue="Application.SteganographyServiceTest" />
+        <item itemvalue="JUnit.SteganographyIntegrationTest" />
         <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.SevenZOperationsTest (1)" />
-        <item itemvalue="Application.SevenZipJBindingInitCheck" />
-        <item itemvalue="JUnit.SevenZOperationsTest" />
-        <item itemvalue="Application.RarOperations" />
       </list>
     </recent_temporary>
   </component>

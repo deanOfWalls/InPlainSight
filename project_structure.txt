@@ -1,4 +1,5 @@
 .
+├── InPlainSight.iml
 ├── pom.xml
 ├── project_structure.txt
 ├── README.md
@@ -17,15 +18,18 @@
 │       │               ├── Main.java
 │       │               └── service
 │       │                   └── SteganographyService.java
-│       └── resources
-│           ├── application.properties
-│           └── static
-│               ├── images
-│               │   ├── actually_a_lizard.png
-│               │   └── not_a_lizard.png
-│               ├── index.html
-│               ├── script.js
-│               └── style.css
+│       ├── resources
+│       │   ├── application.properties
+│       │   └── static
+│       │       ├── images
+│       │       │   ├── actually_a_lizard.png
+│       │       │   └── not_a_lizard.png
+│       │       ├── index.html
+│       │       ├── script.js
+│       │       └── style.css
+│       └── test
+│           └── java
+│               └── SteganographyServiceTest.java
 └── target
     ├── classes
     │   ├── application.properties
@@ -48,7 +52,11 @@
     │       ├── index.html
     │       ├── script.js
     │       └── style.css
-    └── generated-sources
-        └── annotations
+    ├── generated-sources
+    │   └── annotations
+    ├── generated-test-sources
+    │   └── test-annotations
+    └── test-classes
+        └── SteganographyServiceTest.class
 
-25 directories, 27 files
+30 directories, 30 files
