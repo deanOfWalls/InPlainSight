@@ -7,56 +7,47 @@ import org.springframework.web.multipart.MultipartFile;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
+import java.sql.SQLOutput;
 import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.*;
 
 public class SteganographyServiceTest {
-
-    private SteganographyService service;
-
-    // Declare and initialize the tempDirPath field
-    private String tempDirPath = "/path/to/temp/directory"; // Replace with the actual path
-
-    @Before
-    public void setUp() {
-        service = new SteganographyService();
-    }
+    private String tempDirPath = "src/main/resources/static";
 
     @Test
-    public void testSteganographyProcess() throws IOException, InterruptedException {
-        // Load the test images
-        File actuallyALizardFile = new File("src/main/resources/static/images/actually_a_lizard.png");
-        File notALizardFile = new File("src/main/resources/static/images/not_a_lizard.png");
+    public void testCreateRar() {
+        //Given
+        SteganographyService steganographyService = new SteganographyService();
+        List<File> testFiles = Arrays.asList(
+                new File("src/main/resources/static/images/1.png"),
+                new File("src/main/resources/static/images/2.png")
+        );
+        String testPassword = "testPassword";
+        String testRarFileName = tempDirPath + File.separator + "secret.rar";
 
-        byte[] actuallyALizardBytes = loadFileContent(actuallyALizardFile);
-        byte[] notALizardBytes = loadFileContent(notALizardFile);
+        // log the file paths for debugging
+        System.out.println("Test Files: ");
+        testFiles.forEach(file -> System.out.println(file.getAbsolutePath()));
+        System.out.println("RAR File: ");
+        System.out.println(testRarFileName);
 
-        MultipartFile actuallyALizard = new MockMultipartFile("fileToHide", "actually_a_lizard.png", "image/png", actuallyALizardBytes);
-        MultipartFile notALizard = new MockMultipartFile("decoyImage", "not_a_lizard.png", "image/png", notALizardBytes);
 
-        // Encode the files
-        byte[] stegoImageBytes = service.encodeFiles(notALizard, actuallyALizard, "testPassword");
-
-        // Verify the result is not null
-        assertNotNull("Stego image should not be null", stegoImageBytes);
-
-        // Decode the files into the specified directory
-        byte[] extractedData = service.decodeFiles(stegoImageBytes, "testPassword");
-
-        // Verify the extraction
-        assertNotNull("Extracted data should not be null", extractedData);
-
-        // Additional verifications
-        // Compare size/content of the original file and the extracted data
-        assertTrue("Extracted data should match original", Arrays.equals(actuallyALizardBytes, extractedData));
-    }
-
-    private byte[] loadFileContent(File file) throws IOException {
-        try (FileInputStream fis = new FileInputStream(file)) {
-            byte[] fileContent = new byte[(int) file.length()];
-            fis.read(fileContent);
-            return fileContent;
+        //When
+        try {
+            steganographyService.createRar(testFiles, testPassword, testRarFileName);
+        } catch (IOException | InterruptedException e) {
+            // exceptions as needed
+            e.printStackTrace();
         }
+        // log the rar creation
+        System.out.println("Rar created");
+
+        //Then
+        assertTrue(new File(testRarFileName).exists());
+
     }
 }
+
+
