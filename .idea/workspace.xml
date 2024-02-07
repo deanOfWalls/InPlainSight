@@ -7,7 +7,6 @@
     <list default="true" id="ac172f1f-84b0-49c7-8c5f-cc7fd7838af2" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/deanOfWalls/InPlainSight/service/SteganographyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/test/java/SteganographyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/test/java/SteganographyServiceTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,34 +38,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.ImageEncryptorTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;Application.ImageEncryptorTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ImageSteganographyExtractionTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ImageSteganographyTest.executor&quot;: &quot;Run&quot;,
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.RarOperations.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SevenZipJBindingInitCheck.executor&quot;: &quot;Run&quot;,
-    &quot;Application.SteganographyServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.PasswordManagerTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SevenZOperationsTest (1).executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SevenZOperationsTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SteganographyIntegrationTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SteganographyServiceTest.executor&quot;: &quot;Run&quot;,
-    &quot;JUnit.SteganographyServiceTest.testCreateRar.executor&quot;: &quot;Debug&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_directory_selection&quot;: &quot;/home/dean/Dev/InPlainSight_Cat/InPlainSight/src/main/test/java&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/home/dean/Dev/InPlainSight/src/main/resources/static&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.ImageEncryptorTest (1).executor": "Run",
+    "Application.ImageEncryptorTest.executor": "Run",
+    "Application.ImageSteganographyExtractionTest.executor": "Run",
+    "Application.ImageSteganographyTest.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.RarOperations.executor": "Run",
+    "Application.SevenZipJBindingInitCheck.executor": "Run",
+    "Application.SteganographyServiceTest.executor": "Run",
+    "JUnit.PasswordManagerTest.executor": "Run",
+    "JUnit.SevenZOperationsTest (1).executor": "Run",
+    "JUnit.SevenZOperationsTest.executor": "Run",
+    "JUnit.SteganographyIntegrationTest.executor": "Run",
+    "JUnit.SteganographyServiceTest.executor": "Coverage",
+    "JUnit.SteganographyServiceTest.testCreateRar.executor": "Debug",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "kotlin-language-version-configured": "true",
+    "last_directory_selection": "/home/dean/Dev/InPlainSight_Cat/InPlainSight/src/main/test/java",
+    "last_opened_file_path": "/home/dean/Dev/InPlainSight/src/main/resources/static",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.pluginManager"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/main/resources/static" />
@@ -175,5 +174,10 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/InPlainSight$SteganographyServiceTest.ic" NAME="SteganographyServiceTest Coverage Results" MODIFIED="1707145062096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>.*</FILTER>
+    </SUITE>
   </component>
 </project>
